@@ -1,102 +1,70 @@
 
-```markdown
 # 🧠 Pancreatic Tumor Analysis System
 
+This project is a web-based AI application designed to assist in the early detection and classification of pancreatic tumors using medical imaging. By integrating deep learning with image processing, it aims to provide a reliable diagnostic support tool for healthcare professionals and researchers.
 
-## 🚀 Project Overview
+## 📌 Project Features
 
-Pancreatic cancer is one of the deadliest cancers due to its late diagnosis and rapid progression. This project provides a user-friendly interface for:
-- Uploading medical scan images.
-- Automatically preprocessing and analyzing them.
-- Identifying tumor regions.
-- Predicting if the tumor is benign or malignant.
-- Providing visual outputs and accuracy confidence.
+- Upload medical scan images (e.g., CT or MRI)
+- Perform preprocessing including grayscale conversion, HSV transformation, thresholding, and binary masking
+- Use trained deep learning models (CNN, UNet, ResNet, Inception) for tumor classification
+- Display similarity metrics using SSIM and MSE
+- Provide visual output including processed masks and predictions
+- User registration and login functionality
+- Store and retrieve user data using MySQL
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
-- **Frontend**: HTML, CSS (Grid-based layout)
-- **Backend**: Python (Flask), OpenCV, NumPy, scikit-image
-- **Machine Learning**: CNN/UNet/ResNet/Inception Models (`model.h5`)
-- **Database**: MySQL (`pancreaticdbdb.sql`)
-- **Image Processing**: Grayscale, HSV thresholding, segmentation
-- **Model Training**: Keras + TensorFlow (see `ModelBuilder.ipynb`)
+- **Frontend**: HTML, CSS
+- **Backend**: Python, Flask
+- **Image Processing**: OpenCV, scikit-image, NumPy
+- **Machine Learning**: TensorFlow, Keras
+- **Database**: MySQL
+- **Others**: Matplotlib, Pandas, JSON
 
-## 📁 Project Structure
+## ⚙️ Installation & Setup
 
-```
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/pancreatic-tumor-analysis.git
+   cd pancreatic-tumor-analysis
+Install Python Dependencies
 
-├── app.py                 # Flask backend logic
-├── inde.html              # Frontend HTML (CSS Grid layout)
-├── supportcode.py         # Image comparison and preprocessing functions
-├── model.h5               # Trained model
-├── pancreaticdbdb.sql     # MySQL schema with user and plant data
-├── ModelBuilder.ipynb     # Jupyter notebook for training models
-├── static/                # Processed image storage (Grayscale, Binary, etc.)
-├── templates/             # HTML templates for the Flask app
-├── uploads/               # Uploaded images
-
-````
-
-## ⚙️ Setup Instructions
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/pancreatic-tumor-analysis.git
-cd pancreatic-tumor-analysis
-````
-
-### 2. Set up the Python environment
-
-```bash
-pip install -r requirements.txt
-```
-
-If `requirements.txt` is not present, install manually:
-
-```bash
+bash
+Copy
+Edit
 pip install flask opencv-python numpy pandas matplotlib scikit-image mysql-connector-python tensorflow
-```
+Set Up the Database
 
-### 3. Configure MySQL
+Create a MySQL database named pancreaticdbdb
 
-* Import the `pancreaticdbdb.sql` file into your MySQL server.
-* Make sure your `app.py` credentials (host, user, password) match your MySQL setup.
+Import the provided pancreaticdbdb.sql file using phpMyAdmin or MySQL CLI:
 
-### 4. Run the Flask app
+sql
+Copy
+Edit
+SOURCE pancreaticdbdb.sql;
+Run the Application
 
-```bash
+bash
+Copy
+Edit
 python app.py
-```
+Open your browser and go to http://localhost:5000
 
-Visit `http://localhost:5000` in your browser.
+🧪 How It Works
+The user uploads an image.
 
-## 📷 Image Upload Flow
+The system processes the image through various steps (grayscale, thresholding, HSV masking).
 
-1. User registers and logs in.
-2. Uploads medical image.
-3. Image is processed through thresholding, filters, segmentation.
-4. Classification result is shown with model confidence.
+A pre-trained deep learning model (model.h5) evaluates the image and predicts the tumor status.
 
-## 💡 Features
+The system returns the prediction along with confidence scores and visualization.
 
-* User registration and login
-* Image similarity computation using SSIM and MSE
-* Tumor segmentation using CV + deep learning
-* Visual result presentation
-* Modular ML architecture (UNet, ResNet, Inception)
-  
-## 🔐 Security Note
+👨‍💻 Author
+VARUN GOWDA H S
+varungowda1103@gmail.com
 
-> ⚠️ This project is for **educational/research** purposes only. It is **not intended for clinical use** without validation and regulatory approval.
 
-## 📃 License
-
-This project is licensed under the MIT License.
-
----
-
-### 👨‍💻 Contributors
-
-* Varun Gowda H S
 
 
