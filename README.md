@@ -84,7 +84,7 @@ Visit `http://localhost:5000` in your browser.
 * Tumor segmentation using CV + deep learning
 * Visual result presentation
 * Modular ML architecture (UNet, ResNet, Inception)
-
+  
 ## 🔐 Security Note
 
 > ⚠️ This project is for **educational/research** purposes only. It is **not intended for clinical use** without validation and regulatory approval.
