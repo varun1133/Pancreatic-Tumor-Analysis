@@ -99,7 +99,4 @@ This project is licensed under the MIT License.
 
 * Varun Gowda H S
 
-```
 
-Let me know if you'd like me to include a `requirements.txt`, `.gitignore`, or license file!
-```
